@@ -1,0 +1,19 @@
+﻿@{
+    Style.Require("TheMonarch.shCore");
+    Style.Require("TheMonarch.shCoreDefault");
+    
+    Script.Require("TheMonarch.shCore").AtFoot();
+    Script.Require("TheMonarch.shAutoloader").AtFoot();
+    
+    var brushesPath = "/Modules/TheMonarch.SyntaxHighlighter/Scripts"; 
+}
+@using (Script.Foot()) {
+<script type="text/javascript">
+    SyntaxHighlighter.autoloader(
+        'js jscript javascript  @brushesPath/shBrushJScript.js',
+        'applescript            @brushesPath/shBrushAppleScript.js',
+        'c# c-sharp csharp      @brushesPath/shBrushCSharp.js'
+    );
+    SyntaxHighlighter.all();
+</script>
+}
