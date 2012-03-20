@@ -1,6 +1,6 @@
 Name: TheMonarch.SyntaxHighlighter
 AntiForgery: enabled
-Author: The Orchard Team
+Author: Giscard Biamby
 Website: http://orchardproject.net
 Version: 1.0
 OrchardVersion: 1.0
