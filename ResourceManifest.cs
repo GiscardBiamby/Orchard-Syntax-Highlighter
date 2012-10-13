@@ -5,7 +5,7 @@ using System.Text;
 using Orchard;
 using Orchard.UI.Resources;
 
-namespace TheMonarch.bootstrap {
+namespace TheMonarch.SyntaxHighlighter {
 
     public class ResourceManifest : IResourceManifestProvider {
 
@@ -67,9 +67,14 @@ namespace TheMonarch.bootstrap {
             manifest.DefineStyle("TheMonarch.shThemeMidnight").SetUrl(ModuleStyle("shThemeMidnight.css")).SetDependencies("TheMonarch.shCoreMidnight");
             manifest.DefineStyle("TheMonarch.shThemeRDark").SetUrl(ModuleStyle("shThemeRDark.css")).SetDependencies("TheMonarch.shCoreRDark");
 
+            // prettify Styles
+            manifest.DefineStyle("TheMonarch.prettify").SetUrl(ModuleStyle("pretty/prettify.css"));
+            manifest.DefineStyle("TheMonarch.prettify-tubster").SetUrl(ModuleStyle("pretty/prettify-tubster.css"));
+            manifest.DefineScript("TheMonarch.prettify").SetUrl(ModuleScript("pretty/prettify.js")).SetDependencies("jQuery");
+
 
             // Scripts
-            manifest.DefineScript("TheMonarch.shCore").SetUrl(ModuleScript("shCore.js")).SetVersion("3.0.83");
+            manifest.DefineScript("TheMonarch.shCore").SetUrl(ModuleScript("shCore.js")).SetVersion("3.0.83").SetDependencies("jQuery");
             manifest.DefineScript("TheMonarch.shAutoloader").SetUrl(ModuleScript("shAutoloader.js")).SetVersion("3.0.83").SetDependencies("TheMonarch.shCore");
             manifest.DefineScript("TheMonarch.shBrushAppleScript").SetUrl(ModuleScript("shBrushAppleScript.js")).SetVersion("3.0.83").SetDependencies("TheMonarch.shAutoloader");
             manifest.DefineScript("TheMonarch.shBrushAS3").SetUrl(ModuleScript("shBrushAS3.js")).SetVersion("3.0.83").SetDependencies("TheMonarch.shAutoloader");
@@ -97,7 +102,8 @@ namespace TheMonarch.bootstrap {
             manifest.DefineScript("TheMonarch.shBrushVb").SetUrl(ModuleScript("shBrushVb.js")).SetVersion("3.0.83").SetDependencies("TheMonarch.shAutoloader");
             manifest.DefineScript("TheMonarch.shBrushXml").SetUrl(ModuleScript("shBrushXml.js")).SetVersion("3.0.83").SetDependencies("TheMonarch.shAutoloader");
             manifest.DefineScript("TheMonarch.shLegacy").SetUrl(ModuleScript("shLegacy.js")).SetVersion("3.0.83").SetDependencies("TheMonarch.shAutoloader");
-
+            manifest.DefineScript("TheMonarch.shBrushRazor").SetUrl(ModuleScript("shBrushRazor.js")).SetVersion("3.0.83").SetDependencies("TheMonarch.shAutoloader");
+            
         }
     }
 }

@@ -1,19 +1,28 @@
 ﻿@{
-    Style.Require("TheMonarch.shCore");
-    Style.Require("TheMonarch.shCoreDefault");
+    //Script.Require("TheMonarch.shCore").AtHead();
+    //Style.Require("TheMonarch.shCoreDefault").AtHead();
+    //Script.Require("TheMonarch.shAutoloader").AtHead();
+    //var brushesPath = "~/Modules/TheMonarch.SyntaxHighlighter/Scripts"; 
     
-    Script.Require("TheMonarch.shCore").AtFoot();
-    Script.Require("TheMonarch.shAutoloader").AtFoot();
+    Style.Require("TheMonarch.prettify").AtHead();
+    Style.Require("TheMonarch.prettify-tubster").AtHead();     
+    Script.Require("TheMonarch.prettify").AtHead();
     
-    var brushesPath = "/Modules/TheMonarch.SyntaxHighlighter/Scripts"; 
+    
 }
 @using (Script.Foot()) {
 <script type="text/javascript">
-    SyntaxHighlighter.autoloader(
-        'js jscript javascript  @brushesPath/shBrushJScript.js',
-        'applescript            @brushesPath/shBrushAppleScript.js',
-        'c# c-sharp csharp      @brushesPath/shBrushCSharp.js'
-    );
-    SyntaxHighlighter.all();
+    $(document).ready(function () {
+        $('pre code').parent().addClass('prettyprint');
+        prettyPrint();
+@*        SyntaxHighlighter.autoloader(
+            'js jscript javascript    @Url.Content(brushesPath+"/shBrushJScript.js")'
+            , 'applescript            @Url.Content(brushesPath+"/shBrushAppleScript.js")'
+            , 'c# c-sharp csharp      @Url.Content(brushesPath+"/shBrushCSharp.js")'
+            , 'cshtml razor           @Url.Content(brushesPath+"/shBrushRazor.js")'
+            , 'php                    @Url.Content(brushesPath+"/shBrushPhp.js")'
+        );
+        SyntaxHighlighter.all();*@
+    }); 
 </script>
 }
