@@ -1,28 +1,12 @@
 ﻿@{
-    //Script.Require("TheMonarch.shCore").AtHead();
-    //Style.Require("TheMonarch.shCoreDefault").AtHead();
-    //Script.Require("TheMonarch.shAutoloader").AtHead();
-    //var brushesPath = "~/Modules/TheMonarch.SyntaxHighlighter/Scripts"; 
-    
-    Style.Require("TheMonarch.prettify").AtHead();
-    Style.Require("TheMonarch.prettify-tubster").AtHead();     
+    Style.Require("TheMonarch.prettify-tomorrow-night").AtHead();     
     Script.Require("TheMonarch.prettify").AtHead();
-    
-    
 }
 @using (Script.Foot()) {
 <script type="text/javascript">
     $(document).ready(function () {
         $('pre code').parent().addClass('prettyprint');
         prettyPrint();
-@*        SyntaxHighlighter.autoloader(
-            'js jscript javascript    @Url.Content(brushesPath+"/shBrushJScript.js")'
-            , 'applescript            @Url.Content(brushesPath+"/shBrushAppleScript.js")'
-            , 'c# c-sharp csharp      @Url.Content(brushesPath+"/shBrushCSharp.js")'
-            , 'cshtml razor           @Url.Content(brushesPath+"/shBrushRazor.js")'
-            , 'php                    @Url.Content(brushesPath+"/shBrushPhp.js")'
-        );
-        SyntaxHighlighter.all();*@
     }); 
 </script>
 }

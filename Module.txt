@@ -9,3 +9,4 @@ Features:
     TheMonarch.SyntaxHighlighter:
         Description: Description for feature TheMonarch.SyntaxHighlighter.
 		Dependencies: Orchard.Blogs
+Dependencies: jQuery
