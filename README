@@ -1,5 +1,5 @@
-Installation:
-=============
+#Installation
+
 - Install and enable TheMonarch.SyntaxHighlighter module
 - That's all. Any code snippets within <pre><code> tags will be highlighted.
 
