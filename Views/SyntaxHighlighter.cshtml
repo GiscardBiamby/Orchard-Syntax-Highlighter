@@ -1,9 +1,9 @@
 ﻿@model dynamic 
 @{
-    var themeName = Model.ThemeName;
+    var themeName = (string)Model.ThemeName;
     string themeResource = ""; 
     if (!string.IsNullOrWhiteSpace(themeName)) {
-        themeResource = "TheMonarch.prettify-" + themeName; 
+        themeResource = "TheMonarch.prettify-" + themeName.Trim(); 
     }
     else {
         themeResource = "TheMonarch.prettify-github"; 
@@ -15,6 +15,7 @@
 @using (Script.Foot()) {
 <script type="text/javascript">
     $(document).ready(function () {
+        console.log('themeName: @themeName');
         $('pre code').parent().addClass('prettyprint');
         prettyPrint();
     }); 

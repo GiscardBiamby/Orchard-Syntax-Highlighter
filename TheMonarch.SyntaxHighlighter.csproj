@@ -100,8 +100,8 @@
     <Content Include="Styles\pretty\son-of-obsidian.css" />
     <Content Include="Styles\pretty\desert.css" />
     <Content Include="Styles\pretty\sunburst.css" />
-    <Content Include="Styles\pretty\prettify-tomorrow-night.css" />
     <Content Include="Styles\pretty\prettify.css" />
+    <Content Include="Styles\pretty\tomorrow.css" />
     <Content Include="Styles\pretty\vibrant-ink.css" />
     <Content Include="Web.config" />
     <Content Include="Views\Web.config" />

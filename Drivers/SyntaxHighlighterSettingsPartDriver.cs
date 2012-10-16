@@ -31,13 +31,8 @@ namespace TheMonarch.SyntaxHighlighter.Drivers {
         protected override DriverResult Editor(SyntaxHighlighterSettingsPart part, IUpdateModel updater, dynamic shapeHelper) {
             return ContentShape("Parts_SyntaxHighlighterSettings_Edit", () => {
                 var model = new SyntaxHighlighterSettingsViewModel { Theme = part.Theme, Themes = GetThemes() }; 
-                var previousTheme = part.Theme;
                 updater.TryUpdateModel(part, Prefix, null, null);
 
-                // restore theme if the input is empty, meaning it has not been reset
-                if (string.IsNullOrEmpty(part.Theme)) {
-                    part.Theme = previousTheme;
-                }
                 return shapeHelper.EditorTemplate(TemplateName: TemplateName, Model: model, Prefix: Prefix);
             })
                 .OnGroup("syntax-highlighter");
