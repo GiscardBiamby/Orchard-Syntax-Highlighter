@@ -1,70 +1,67 @@
-/* Tomorrow Night Theme */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+/* Hemisu Dark */
+/* Original theme - http://noahfrederick.com/vim-color-scheme-hemisu/ */
 /* Pretty printing styles. Used with prettify.js. */
 /* SPAN elements with the classes below are added by prettyprint. */
-/* source: http://jmblog.github.com/color-themes-for-google-code-prettify */
-/* modified to work with http://github.mnewton.com/prettify-wrapper */
-
 /* plain text */
 .pln {
-  color: #c5c8c6; }
+  color: #eeeeee; }
 
 @media screen {
   /* string content */
   .str {
-    color: #b5bd68; }
+    color: #b1d631; }
 
   /* a keyword */
   .kwd {
-    color: #b294bb; }
+    color: #b1d631; }
 
   /* a comment */
   .com {
-    color: #969896; }
+    color: #777777; }
 
   /* a type name */
   .typ {
-    color: #81a2be; }
+    color: #bbffaa; }
 
   /* a literal value */
   .lit {
-    color: #de935f; }
+    color: #9fd3e6; }
 
   /* punctuation */
   .pun {
-    color: #c5c8c6; }
+    color: #eeeeee; }
 
   /* lisp open bracket */
   .opn {
-    color: #c5c8c6; }
+    color: #eeeeee; }
 
   /* lisp close bracket */
   .clo {
-    color: #c5c8c6; }
+    color: #eeeeee; }
 
   /* a markup tag name */
   .tag {
-    color: #cc6666; }
+    color: #eeeeee; }
 
   /* a markup attribute name */
   .atn {
-    color: #de935f; }
+    color: #b1d631; }
 
   /* a markup attribute value */
   .atv {
-    color: #8abeb7; }
+    color: #bbffaa; }
 
   /* a declaration */
   .dec {
-    color: #de935f; }
+    color: #eeeeee; }
 
   /* a variable name */
   .var {
-    color: #cc6666; }
+    color: #eeeeee; }
 
   /* a function name */
   .fun {
-    color: #81a2be; } }
+    color: #9fd3e6; } }
 /* Use higher contrast and text-weight for printable form. */
 @media print, projection {
   .str {
@@ -98,18 +95,13 @@
   .atv {
     color: #060; } }
 /* Style */
-pre.prettyprint, code.prettyprint {
-  background: #1d1f21;
+pre.prettyprint {
+  background: black;
   font-family: Menlo, Monaco, Consolas, monospace;
   font-size: 12px;
-  text-shadow: 0 1px #1d1f21;
-  line-height: 1.5; }
-pre.prettyprint {
+  line-height: 1.5;
   border: 1px solid #ccc;
   padding: 10px; }
-code.prettyprint {
-  padding: 2px;
-}
 
 /* Specify class=linenums on a pre to get line numbering */
 ol.linenums {
@@ -136,27 +128,3 @@ li.L5,
 li.L7,
 li.L9 {
   /* */ }
-
-
-
-
-.prettyprint.linenums {
-  -webkit-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
-     -moz-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
-          box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
-}
-
-/* Specify class=linenums on a pre to get line numbering */
-ol.linenums {
-  margin: 0 0 0 33px; /* IE indents via margin-left */
-}
-ol.linenums li {
-  padding-left: 12px;
-  color: #bebec5;
-  line-height: 20px;
-}
-pre.prettyprint {
-  overflow: auto;
-  word-wrap: normal;
-  white-space: pre;
-}

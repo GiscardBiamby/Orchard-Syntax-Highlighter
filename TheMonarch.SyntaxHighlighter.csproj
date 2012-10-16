@@ -94,8 +94,15 @@
     <Content Include="Scripts\pretty\lang-xq.js" />
     <Content Include="Scripts\pretty\lang-yaml.js" />
     <Content Include="Scripts\pretty\prettify.js" />
+    <Content Include="Styles\pretty\github.css" />
+    <Content Include="Styles\pretty\hemisu-dark.css" />
+    <Content Include="Styles\pretty\hemisu-light.css" />
+    <Content Include="Styles\pretty\son-of-obsidian.css" />
+    <Content Include="Styles\pretty\desert.css" />
+    <Content Include="Styles\pretty\sunburst.css" />
     <Content Include="Styles\pretty\prettify-tomorrow-night.css" />
     <Content Include="Styles\pretty\prettify.css" />
+    <Content Include="Styles\pretty\vibrant-ink.css" />
     <Content Include="Web.config" />
     <Content Include="Views\Web.config" />
     <Content Include="Scripts\Web.config" />
@@ -112,13 +119,28 @@
       <Project>{9916839C-39FC-4CEB-A5AF-89CA7E87119F}</Project>
       <Name>Orchard.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Orchard.Blogs\Orchard.Blogs.csproj">
+      <Project>{63fbd4d9-e1da-4a7b-aa6a-d6074fe50867}</Project>
+      <Name>Orchard.Blogs</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Drivers\SyntaxHighlighterPartDriver.cs" />
+    <Compile Include="Drivers\SyntaxHighlighterSettingsPartDriver.cs" />
+    <Compile Include="Handlers\SyntaxHighlighterSettingsPartHandler.cs" />
     <Compile Include="Handlers\SyntaxHighlighterPartHandler.cs" />
+    <Compile Include="Migrations.cs" />
+    <Compile Include="Models\SyntaxHighlighterPart.cs" />
+    <Compile Include="Models\SyntaxHighlighterSettingsPartRecord.cs" />
     <Compile Include="ResourceManifest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Placement.info">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="README" />
+    <Content Include="Views\EditorTemplates\Parts\SyntaxHighlighterSettings.cshtml" />
     <None Include="Views\SyntaxHighlighter.cshtml" />
   </ItemGroup>
   <ItemGroup>

@@ -1,6 +1,16 @@
-﻿@{
-    Style.Require("TheMonarch.prettify-tomorrow-night").AtHead();     
-    Script.Require("TheMonarch.prettify").AtHead();
+﻿@model dynamic 
+@{
+    var themeName = Model.ThemeName;
+    string themeResource = ""; 
+    if (!string.IsNullOrWhiteSpace(themeName)) {
+        themeResource = "TheMonarch.prettify-" + themeName; 
+    }
+    else {
+        themeResource = "TheMonarch.prettify-github"; 
+    }
+
+    Style.Require(themeResource).AtHead();     
+    Script.Require("TheMonarch.prettify").AtFoot();
 }
 @using (Script.Foot()) {
 <script type="text/javascript">

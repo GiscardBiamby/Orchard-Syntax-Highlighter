@@ -1,0 +1,8 @@
+How to use:
+
+For example, if you want to use this to post syntax highlighted code to your Orchard blog: 
+- Install and enable TheMonarch.SyntaxHighlighter module
+- That's all. Any code snippets within <pre><code> tags will be highlighted.
+
+Coming Soon: 
+Dashboard UI for selecting prettify theme. 
