@@ -139,8 +139,8 @@
     <Content Include="Placement.info">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="README" />
     <Content Include="Views\EditorTemplates\Parts\SyntaxHighlighterSettings.cshtml" />
+    <None Include="README.md" />
     <None Include="Views\SyntaxHighlighter.cshtml" />
   </ItemGroup>
   <ItemGroup>
